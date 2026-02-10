@@ -1,0 +1,1 @@
+const express = require('express');\nconst app = express();\nconst PORT = process.env.PORT || 3000;\n\n// Middleware to parse JSON\napp.use(express.json());\n\n// Sample route\napp.get('/api', (req, res) => {\n    res.send('Welcome to the DokVelt backend server!');\n});\n\n// Start the server\napp.listen(PORT, () => {\n    console.log(`Server is running on port ${PORT}`);\n});\n
